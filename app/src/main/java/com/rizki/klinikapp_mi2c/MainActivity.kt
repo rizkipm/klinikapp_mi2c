@@ -16,10 +16,11 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         //ini kita sebagai splash screen
         setContentView(R.layout.activity_main)
-        //ini agar page full screen
+        //ini agar page full screen (OPSIONAL)
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
+        //splash screen
         //handle untuk delay selama beberapa detik
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, StartScreen2::class.java)
@@ -31,5 +32,11 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //TASK :
+        //Splash Screen
+        //PADA PAGE START SCREEN 2 --> klik button Get Started akan pindah ke page login
+        //Paga page login, ketika klik tulisan did not have account --> pindah ke page signup
+        //page page signup, ketika klik tulisan have account --> pindah ke page login
+
     }
 }
